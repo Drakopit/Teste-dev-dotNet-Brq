@@ -7,16 +7,19 @@ sqllocaldb create "LocalDbTruck"
 (LocalDb)\LocalDbTruck
 
 ## Depêndencias (EntityFrameworkCore 5.0.0 e .Net Core 3.1)
-Swashbuckle.AspNetCore (Versão 6.2.3)
-Microsoft.EntityFrameworkCore
-Microsoft.EntityFrameworkCore.Tools
-Microsoft.EntityFrameworkCore.Design
-Microsoft.EntityFrameworkCore.SqlServer
-xUnit (Versão 2.4.1)
+
+- Swashbuckle.AspNetCore (Versão 6.2.3)
+- Microsoft.EntityFrameworkCore
+- Microsoft.EntityFrameworkCore.Tools
+- Microsoft.EntityFrameworkCore.Design
+- Microsoft.EntityFrameworkCore.SqlServer
+- xUnit (Versão 2.4.1)
 
 ## Criar base de dados
-Add-Migrations NomePrimeiraMigration
+```
+Add-Migrations "Nome da Migração"
 Update-Database
+```
 
 ## Observações
 Muita coisa poderia ter sido feita de uma maneira melhor.
@@ -33,4 +36,4 @@ de um auto mapper.
 E por último, poderia terem sido configuradas as depêndencias em um container
 Docker. CI/CD não seria interessantes nesse teste, pois o mesmo deve rodar
 localmente.
-Enfim... É isso!
+Enfim... É isso! 👍
