@@ -1,54 +1,42 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
 
 namespace BRQ_Truck.Domain
 {
     public class Truck : Entity
     {
+        public string Model { get; set; }
 
-        public Truck() {}
+        public DateTime YearOfManufacture { get; set; }
 
-        [MaxLength(2)]
-        public string Model
+        public DateTime YearModel { get; set; }
+
+        public bool CheckModel()
         {
-            get
+            if (Model != null)
             {
-                return this.Model;
+                if (Model.ToUpper() == "FH" || Model.ToUpper() == "FM")
+                    return true;
             }
-            set
-            {
-                if (value.ToString().ToUpper() == "FH" || value.ToString().ToUpper() == "FM")
-                    this.Model = value;
-                else
-                    throw new ArgumentException("Invalid Value!");
-            }
+            return false;
         }
-        public DateTime YearOfManufacture
+
+        public bool CheckYearOfManufacture()
         {
-            get
+            if (YearOfManufacture != null)
             {
-                return this.YearOfManufacture;
+                if (YearOfManufacture.Year == DateTime.Now.Year)
+                    return true;
             }
-            set
-            {
-                if (value.Year == DateTime.Now.Year)
-                    this.YearOfManufacture = value;
-                else
-                    throw new ArgumentException("Invalid Year!");
-            }
+            return false;
         }
-        public DateTime YearModel
+
+        public bool CheckYearModel()
         {
-            get
+            if (YearModel.Year == DateTime.Now.Year || YearModel.Year == DateTime.Now.Year + 1)
             {
-                return this.YearModel;
+                return true;
             }
-            set
-            {
-                if (value.Year == DateTime.Now.Year || value.Year == (DateTime.Now.Year + 1))
-                    this.YearModel = value;
-                else
-                    throw new ArgumentException("Invalid Year!");
-            }
+            return false;
         }
     }
 }

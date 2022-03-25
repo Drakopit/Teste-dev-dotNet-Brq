@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRQ-Truck.Api", "BRQ-Truck.Api.csproj", "{48B115A2-3230-4E0B-888F-533AC85094B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRQ-Truck.Api", "BRQ-Truck.Api.csproj", "{12D50EB3-16E0-4769-950F-01214D4DAD4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRQ-Truck.Domain", "..\BRQ-Truck.Domain\BRQ-Truck.Domain.csproj", "{DC52502B-1CA3-45FA-99F6-FC8B1FFDF402}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRQ-Truck.Domain", "..\BRQ-Truck.Domain\BRQ-Truck.Domain.csproj", "{AAAEA26C-C8B7-48CC-8EAF-C9603C5D4CA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRQ-Truck.Repository", "..\BRQ-Truck.Repository\BRQ-Truck.Repository.csproj", "{9D50563F-BF1F-4E60-A5F2-CAEC953F4E80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRQ-Truck.Repository", "..\BRQ-Truck.Repository\BRQ-Truck.Repository.csproj", "{A87AD609-BBA0-4BAC-898A-BC9CAE45AC41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,23 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{48B115A2-3230-4E0B-888F-533AC85094B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{48B115A2-3230-4E0B-888F-533AC85094B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{48B115A2-3230-4E0B-888F-533AC85094B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{48B115A2-3230-4E0B-888F-533AC85094B5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DC52502B-1CA3-45FA-99F6-FC8B1FFDF402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC52502B-1CA3-45FA-99F6-FC8B1FFDF402}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC52502B-1CA3-45FA-99F6-FC8B1FFDF402}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC52502B-1CA3-45FA-99F6-FC8B1FFDF402}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9D50563F-BF1F-4E60-A5F2-CAEC953F4E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D50563F-BF1F-4E60-A5F2-CAEC953F4E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9D50563F-BF1F-4E60-A5F2-CAEC953F4E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D50563F-BF1F-4E60-A5F2-CAEC953F4E80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12D50EB3-16E0-4769-950F-01214D4DAD4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12D50EB3-16E0-4769-950F-01214D4DAD4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12D50EB3-16E0-4769-950F-01214D4DAD4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12D50EB3-16E0-4769-950F-01214D4DAD4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAAEA26C-C8B7-48CC-8EAF-C9603C5D4CA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAAEA26C-C8B7-48CC-8EAF-C9603C5D4CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAAEA26C-C8B7-48CC-8EAF-C9603C5D4CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAAEA26C-C8B7-48CC-8EAF-C9603C5D4CA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A87AD609-BBA0-4BAC-898A-BC9CAE45AC41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A87AD609-BBA0-4BAC-898A-BC9CAE45AC41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A87AD609-BBA0-4BAC-898A-BC9CAE45AC41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A87AD609-BBA0-4BAC-898A-BC9CAE45AC41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {98EDCF5D-C00C-439C-AA42-FC43D4943932}
+		SolutionGuid = {1E66BA77-D66E-4DFF-A5AC-DB142CCD9E28}
 	EndGlobalSection
 EndGlobal

@@ -1,5 +1,9 @@
 ﻿using BRQ_Truck.Domain;
+using BRQ_Truck.Repository.Repositories.Interface;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -9,43 +13,83 @@ namespace BRQ_Truck.Api.Controllers
     [ApiController]
     public class TruckController : ControllerBase
     {
-        private readonly LocalDBContext _dBContext;
+        private readonly ITruckRepository _repository;
 
-        public TruckController(LocalDBContext dBContext)
+        public TruckController(ITruckRepository repository)
         {
-            _dBContext = dBContext;
+            _repository = repository;
         }
 
         // GET: api/<TruckController>
         [HttpGet]
-        public ActionResult<List<Truck>> Get()
+        public async Task<ActionResult<List<Truck>>> Get()
         {
-            return Ok(_dBContext.Truck.ToList());
+            try
+            {
+                return Ok(await _repository.GetAll());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         // GET api/<TruckController>/5
         [HttpGet("{id}")]
-        public ActionResult<Truck> Get(int id)
+        public async Task<ActionResult<Truck>> Get(int id)
         {
-            return Ok(_dBContext.Truck.Where(t => t.Id == id).FirstOrDefault());
+            try
+            {
+                return Ok(await _repository.Get(id));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
-        //// POST api/<TruckController>
-        //[HttpPost]
-        //public void Post([FromBody] string value)
-        //{
-        //}
+        // POST api/<TruckController>
+        [HttpPost]
+        public async Task<ActionResult<bool>> Post([FromBody] Truck value)
+        {
+            try
+            {
+                var result = await _repository.Insert(value);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
-        //// PUT api/<TruckController>/5
-        //[HttpPut("{id}")]
-        //public void Put(int id, [FromBody] string value)
-        //{
-        //}
+        // PUT api/<TruckController>/5
+        [HttpPut]
+        public async Task<ActionResult<bool>> Put([FromBody] Truck value)
+        {
+            try
+            {
+                var result = await _repository.Update(value);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
-        //// DELETE api/<TruckController>/5
-        //[HttpDelete("{id}")]
-        //public void Delete(int id)
-        //{
-        //}
+        // DELETE api/<TruckController>/5
+        [HttpDelete("{id}")]
+        public async void Delete(int id)
+        {
+            try
+            {
+                await _repository.Delete(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
