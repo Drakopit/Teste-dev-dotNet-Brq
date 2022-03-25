@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRQ-Truck.Api", "BRQ-Truck.Api.csproj", "{12D50EB3-16E0-4769-950F-01214D4DAD4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BRQ-Truck.Api", "BRQ-Truck.Api.csproj", "{12D50EB3-16E0-4769-950F-01214D4DAD4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRQ-Truck.Domain", "..\BRQ-Truck.Domain\BRQ-Truck.Domain.csproj", "{AAAEA26C-C8B7-48CC-8EAF-C9603C5D4CA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BRQ-Truck.Domain", "..\BRQ-Truck.Domain\BRQ-Truck.Domain.csproj", "{AAAEA26C-C8B7-48CC-8EAF-C9603C5D4CA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRQ-Truck.Repository", "..\BRQ-Truck.Repository\BRQ-Truck.Repository.csproj", "{A87AD609-BBA0-4BAC-898A-BC9CAE45AC41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BRQ-Truck.Repository", "..\BRQ-Truck.Repository\BRQ-Truck.Repository.csproj", "{A87AD609-BBA0-4BAC-898A-BC9CAE45AC41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRQ-Truck.Teste", "..\BRQ-Truck.Teste\BRQ-Truck.Teste.csproj", "{40E309C2-B7EA-4BAC-89E8-2E8F3FE622F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{A87AD609-BBA0-4BAC-898A-BC9CAE45AC41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A87AD609-BBA0-4BAC-898A-BC9CAE45AC41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A87AD609-BBA0-4BAC-898A-BC9CAE45AC41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40E309C2-B7EA-4BAC-89E8-2E8F3FE622F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40E309C2-B7EA-4BAC-89E8-2E8F3FE622F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40E309C2-B7EA-4BAC-89E8-2E8F3FE622F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40E309C2-B7EA-4BAC-89E8-2E8F3FE622F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

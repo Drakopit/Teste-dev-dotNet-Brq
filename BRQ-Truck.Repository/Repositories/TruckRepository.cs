@@ -73,10 +73,10 @@ namespace BRQ_Truck.Repository.Repositories
                     if (result != null)
                     {
                         _dbContext.Entry(result).State = EntityState.Detached;
+                        _dbContext.Entry(truck).State = EntityState.Modified;
+                        await _dbContext.SaveChangesAsync();
+                        return true;
                     }
-                    _dbContext.Entry(truck).State = EntityState.Modified;
-                    await _dbContext.SaveChangesAsync();
-                    return true;
                 }
                 return false;
             }
@@ -86,13 +86,14 @@ namespace BRQ_Truck.Repository.Repositories
             }
         }
 
-        public async Task Delete(int id)
+        public async Task<bool> Delete(int id)
         {
             try
             {
                 var truck = await _dbContext.Truck.Where(t => t.Id == id).FirstAsync();
                 _dbContext.Truck.Remove(truck);
                 await _dbContext.SaveChangesAsync();
+                return true;
             }
             catch (Exception ex)
             {

@@ -10,6 +10,6 @@ namespace BRQ_Truck.Repository.Repositories.Interface
         Task<Truck> Get(int id);
         Task<bool> Insert(Truck truck);
         Task<bool> Update(Truck truck);
-        Task Delete(int id);
+        Task<bool> Delete(int id);
     }
 }
