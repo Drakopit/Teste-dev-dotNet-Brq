@@ -1,23 +1,24 @@
-## Teste-dev-dotNet-Brq
+# Teste-dev-dotNet-Brq
 
-# Criando o servidor (No cmd)
+## Criando o servidor (Por linha de comando)
 sqllocaldb create "LocalDbTruck"
 
-# Servidor
+## Servidor
 (LocalDb)\LocalDbTruck
 
-# Depêndencias (EntityFrameworkCore 5.0.0 e .Net Core 3.1)
+## Depêndencias (EntityFrameworkCore 5.0.0 e .Net Core 3.1)
 Swashbuckle.AspNetCore (Versão 6.2.3)
 Microsoft.EntityFrameworkCore
 Microsoft.EntityFrameworkCore.Tools
 Microsoft.EntityFrameworkCore.Design
 Microsoft.EntityFrameworkCore.SqlServer
+xUnit (Versão 2.4.1)
 
-# Criar base de dados
+## Criar base de dados
 Add-Migrations NomePrimeiraMigration
 Update-Database
 
-# Observações
+## Observações
 Muita coisa poderia ter sido feita de uma maneira melhor.
 Mas, como não dispunha de muito tempo, fiz da maneira mais básica possível.
 
